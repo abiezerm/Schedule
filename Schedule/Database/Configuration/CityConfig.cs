@@ -8,11 +8,11 @@ public class CityConfig : IEntityTypeConfiguration<City>
 {
     public void Configure(EntityTypeBuilder<City> builder)
     {
-        builder.ToTable("Cities");
+        builder.ToTable("city");
         builder.HasKey(e => e.Id);
 
         builder.Property(e => e.Id).HasColumnName("idCity");
-        builder.Property(e => e.Name).HasColumnName("nameCity").HasMaxLength(50);
+        builder.Property(e => e.Name).HasColumnName("City").HasMaxLength(50);
         builder.Property(e => e.IsActive).HasDefaultValue(true);
     }
 }
