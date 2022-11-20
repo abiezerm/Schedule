@@ -11,8 +11,8 @@ namespace Schedule.Database.Configuration
             builder.ToTable("type_document");
             builder.HasKey(e => e.Id);
 
-            builder.Property(e => e.Id).HasColumnName("idTypeDocumment");
-            builder.Property(e => e.Name).HasColumnName("TypeDocumment").HasMaxLength(50);
+            builder.Property(e => e.Id).HasColumnName("idTypeDocument");
+            builder.Property(e => e.Name).HasColumnName("TypeDocument").HasMaxLength(50);
             builder.Property(e => e.IsActive).HasDefaultValue(true);
         }
     }

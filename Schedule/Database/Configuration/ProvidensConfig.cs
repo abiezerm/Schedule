@@ -4,7 +4,7 @@ using Schedule.Domain.Entities;
 
 namespace Schedule.Database.Configuration
 {
-    public class ProvidensConfig : IEntityTypeConfiguration<Providences>
+    public class ProvidensConfig : IEntityTypeConfiguration<Province>
     {
         public void Configure(EntityTypeBuilder<Province> builder)
         {

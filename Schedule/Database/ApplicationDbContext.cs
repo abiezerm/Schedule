@@ -9,7 +9,8 @@ public class ApplicationDbContext : DbContext
     {
             
     }
-    public DbSet<Country> Countries { get; set;  }
+    public DbSet<Country> Countries { get; set; }
+    public DbSet<Appointment> Appointments { get; set; }
     
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {

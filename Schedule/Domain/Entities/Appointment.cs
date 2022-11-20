@@ -8,15 +8,24 @@
         public string LastName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public string DateShedule { get; set; }
-        public string atDate { get; set; }
+        public DateTime DateShedule { get; set; }
+        public DateTime atDate { get; set; }
 
-        public IList<StatusMigratory> ImmigrationStatuses { get; set; }
-        public IList<City> Cities { get; set; }
-        public IList<TypeDocument> TypeDocuments { get; set; }
-        public IList<Country> Nationalities { get; set; }
-        public IList<Services> Services{ get; set; }
+        public int idCity { get; set; }
 
+        public int idStatusMigratory { get; set; }
+        public int idTypeDocument { get; set; }
+        public int idNationality { get; set; }
+        public int idServices { get; set; }
+
+
+        public StatusMigratory StatusMigratory { get; set; }
+        public City City { get; set; }
+        public TypeDocument TypeDocument { get; set; }
+        public Country Nationalitie { get; set; }
+        public Services Service { get; set; }
 
     }
 }
+
+
