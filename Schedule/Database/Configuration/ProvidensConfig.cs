@@ -12,7 +12,7 @@ namespace Schedule.Database.Configuration
             builder.HasKey(e => e.Id);
 
             builder.Property(e => e.Id).HasColumnName("idProvince");
-            builder.Property(e => e.Name).HasColumnName("City").HasMaxLength(50);
+            builder.Property(e => e.Name).HasColumnName("provinces").HasMaxLength(50);
             builder.Property(e => e.IsActive).HasDefaultValue(true);
         }
 

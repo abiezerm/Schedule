@@ -11,8 +11,13 @@ public class CityConfig : IEntityTypeConfiguration<City>
         builder.ToTable("city");
         builder.HasKey(e => e.Id);
 
+
         builder.Property(e => e.Id).HasColumnName("idCity");
+        builder.Property(e => e.ProvinceId).HasColumnName("idProvince");
+        
         builder.Property(e => e.Name).HasColumnName("City").HasMaxLength(50);
         builder.Property(e => e.IsActive).HasDefaultValue(true);
+
+        builder.HasOne(c => c.Province).WithMany().HasForeignKey(x => x.ProvinceId);
     }
 }

@@ -8,7 +8,7 @@ namespace Schedule.Database.Configuration
     {
         public void Configure(EntityTypeBuilder<Appointment> builder)
         {
-            builder.ToTable("appointment");
+            builder.ToTable("Appointment");
             builder.HasKey(e => e.Id);
 
             builder.Property(e => e.Id).HasColumnName("idAppointment");
@@ -28,8 +28,6 @@ namespace Schedule.Database.Configuration
             builder.HasOne(a => a.TypeDocument).WithMany().HasForeignKey(a => a.idTypeDocument);
             builder.HasOne(a => a.Nationalitie).WithMany().HasForeignKey(a => a.idNationality);
             builder.HasOne(a => a.Service).WithMany().HasForeignKey(a => a.idServices);
-
-    }
-
+        }
     }
 }
